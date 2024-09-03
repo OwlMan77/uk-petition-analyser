@@ -1,0 +1,36 @@
+
+thead {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #242424;
+    background-color: #fff;
+    font-weight: 600;
+}
+
+tfoot {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #242424;
+    background-color: #fff;
+    font-weight: 600;
+}
+
+tbody {
+    display: block;
+    max-height: 200px;
+    overflow-y: scroll;
+    font-weight: 600;
+}
+
+thead > tr > td{
+    width: 130px;
+}
+
+tbody > tr > td{
+    width: 130px;
+}
+tfoot > tr > td{
+    width: 130px;
+}
