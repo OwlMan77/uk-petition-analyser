@@ -1,0 +1,8 @@
+svg {
+    padding: 5px;
+}
+circle {
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    transition: stroke-dashoffset 1s;
+}
