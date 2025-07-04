@@ -1,7 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
+import { petitionApi } from './services/petitions';
 
 export const store = configureStore({
-    reducer: {},
+    reducer: {
+        [petitionApi.reducerPath]: petitionApi.reducer,
+    },
+    middleware: (getDefaultMiddleware) =>
+        getDefaultMiddleware().concat(petitionApi.middleware),
     devTools: process.env.NODE_ENV !== 'production'
 });
 
