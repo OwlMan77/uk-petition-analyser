@@ -1,0 +1,16 @@
+.stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+h3, h4 {
+    color: #242424;
+    background-color: #fff;
+    border-radius: 3px;
+}
+
+blockquote {
+    font-weight: 500;
+    font-size: 1.2rem;
+}
