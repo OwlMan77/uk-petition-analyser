@@ -84,7 +84,7 @@ export interface PetitionSummary {
     background: string;
     additional_details: string;
     government_response: GovernmentResponse;
-    debate: Debate;
+    debate: Debate | null;
     departments: Department[];
     url_to_page: string;
     invalid_countries: Omit<SignatureBy, 'code'>[];
