@@ -7,7 +7,13 @@ interface Props {
 
 const RegionList = ({ region_by_percentage }: Props) => {
 
-    const rows = Object.entries(region_by_percentage).map(([name, percentage]) => {
+    const regions = Object.entries(region_by_percentage);
+
+    const highestVotingRegion =  regions.sort(([, percentageA], [, percentageB]) => {
+        return percentageB - percentageA;
+    })[0][0]
+
+    const rows = regions.map(([name, percentage]) => {
         return (<tr key={`${name}`}>
             <td>{name}</td>
             <td>{percentage.toFixed(2)}%</td>
@@ -24,6 +30,12 @@ const RegionList = ({ region_by_percentage }: Props) => {
             <tbody>
                 {rows}
             </tbody>
+            <tfoot>
+                <tr>
+                    <td>Highest voting region:</td>
+                    <td>{highestVotingRegion}</td>
+                </tr>
+            </tfoot>
         </table>
     );
 }
